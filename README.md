@@ -6,3 +6,4 @@ Experiment List
 4. Longest Common Subsequence
 5. Minimum spanning tree - prim's and kruskal's algorithm
 6. Single Source Shortest Path (SSSP) using Greedy approach - Djikstra's Algorithm
+7. N-Queens problem using backtracking
