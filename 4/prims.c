@@ -3,6 +3,7 @@
 
 int a, b, u, v, n, i, j, ne = 1;
 int visited[10] = {0}, min, mincost = 0, cost[10][10];
+
 void main() {
   printf("\n Enter the number of nodes:");
   scanf("%d", & n);
@@ -20,6 +21,7 @@ void main() {
     }
     printf("\n");
   }
+
   visited[1] = 1;
   printf("\n");
   while (ne < n) {
@@ -31,13 +33,13 @@ void main() {
             a = u = i;
             b = v = j;
           }
-    if (visited[u] == 0 || visited[v] == 0) {
-      printf("\n Edge %d:(%d %d) cost:%d", ne++, a, b, min);
-      mincost += min;
-      visited[b] = 1;
+          if (visited[u] == 0 || visited[v] == 0) {
+            printf("\n Edge %d:(%d %d) cost:%d", ne++, a, b, min);
+            mincost += min;
+            visited[b] = 1;
     }
     cost[a][b] = cost[b][a] = 999;
   }
-  printf("\n Minimun cost=%d\n", mincost);
+   printf("\n Minimun cost=%d\n", mincost);
 
 }

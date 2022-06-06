@@ -1,4 +1,4 @@
-//bellman ford
+    //bellman ford
 #include<stdio.h>
 #include<math.h>
 #define INFIN 1000
@@ -55,11 +55,8 @@ int main()
         {
             dist[j]=newdist[j];
             //printf("Distance to %d is %d\n",j,dist[j]);
-        }
-        
+        }   
     }
-        
-    
     for(i=1;i<=n;i++)
     {
         printf("Distance to %d is %d\n",i,dist[i]);

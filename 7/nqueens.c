@@ -1,19 +1,7 @@
 #include <stdio.h>
-
 #include <stdlib.h>
 
 int board[20], count;
-
-int main() {
-  int n, i, j;
-  void queen(int row, int n);
-
-  printf(" - N Queens Problem Using Backtracking -");
-  printf("\n\nEnter number of Queens:");
-  scanf("%d", & n);
-  queen(1, n);
-  return 0;
-}
 
 void print(int n) {
   int i, j;
@@ -50,11 +38,19 @@ void queen(int row, int n) {
   int column;
   for (column = 1; column <= n; ++column) {
     if (place(row, column)) {
-      board[row] = column;
+      board[row] = column;  
       if (row == n)
         print(n);
       else
         queen(row + 1, n);
     }
   }
+}
+
+int main() {
+  int n, i, j;
+  printf("\n\nEnter number of Queens:");
+  scanf("%d", &n);
+  queen(1, n);
+  return 0;
 }
